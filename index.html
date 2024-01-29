@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voter Eligibility Checker</title>
+	<script>
+		function checkEligibility() {
+			var age = document.getElementById("age").value;
+			if (age >= 18) {
+				document.getElementById("result").innerHTML = "You are eligible to vote!";
+			} else {
+				document.getElementById("result").innerHTML = "You are not eligible to vote yet.";
+			}
+		}
+	</script>
+  <style>
+     body {
+            font-family: 'pristina',cursive;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url("https://plus.unsplash.com/premium_photo-1673697240011-76f7f9220300?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+
+  </style>
+</head>
+<body>
+	<h1>Voter Eligibility Checker</h1>
+	<p>Please enter your age:</p>
+	<input type="number" id="age" name="age" min="0" max="150">
+	<button onclick="checkEligibility()">Check Eligibility</button>
+	<p id="result"></p>
+</body>
+</html>
